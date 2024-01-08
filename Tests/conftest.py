@@ -9,6 +9,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 @pytest.fixture(scope="class")
 def start_fixture(request):
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+    driver.get("http://demostore.supersqa.com/")
     if request.cls is not None:
         request.cls.driver = driver
         driver.maximize_window()
