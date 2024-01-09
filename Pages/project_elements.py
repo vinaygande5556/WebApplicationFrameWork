@@ -14,7 +14,7 @@ class Elements:
                      }
         return dict_path[select_by]
 
-    def click(self, select_by, locator):
+    def ele_click(self, select_by, locator):
         return self.driver.find_element(self.select_by_element(select_by), locator).click()
 
     def send_text(self, select_by, locator, text=None):
